@@ -1,14 +1,17 @@
 import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
+
 from google.adk.agents import Agent
 from google.adk.models.lite_llm import LiteLlm
 
 try:
     from dotenv import load_dotenv
+
     load_dotenv(Path(__file__).resolve().parents[1] / ".env")
 except Exception:
     pass
+
 
 def get_weather(city: str) -> dict:
     """Retrieves the current weather report for a specified city.
@@ -49,27 +52,22 @@ def get_current_time(city: str) -> dict:
     else:
         return {
             "status": "error",
-            "error_message": (
-                f"Sorry, I don't have timezone information for {city}."
-            ),
+            "error_message": (f"Sorry, I don't have timezone information for {city}."),
         }
 
     tz = ZoneInfo(tz_identifier)
     now = datetime.datetime.now(tz)
-    report = (
-        f'The current time in {city} is {now.strftime("%Y-%m-%d %H:%M:%S %Z%z")}'
-    )
+    report = f"The current time in {city} is {now.strftime('%Y-%m-%d %H:%M:%S %Z%z')}"
     return {"status": "success", "report": report}
 
 
 root_agent = Agent(
     name="weather_time_agent",
     model=LiteLlm(model="openai/gpt-4.1"),
-    description=(
-        "Agent to answer questions about the time and weather in a city."
-    ),
+    description=("Agent to answer questions about the time and weather in a city."),
     instruction=(
-        "You are a helpful agent who can answer user questions about the time and weather in a city."
+        "You are a helpful agent who can answer user questions about the time and "
+        "weather in a city."
     ),
     tools=[get_weather, get_current_time],
 )

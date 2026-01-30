@@ -6,5 +6,16 @@
   "search.exclude": {
     "**/__pycache__/**": true,
     "**/.adk/**": true
+  },
+  "editor.formatOnSave": true,
+  "python.linting.enabled": false,
+  "python.linting.flake8Enabled": false,
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    }
   }
 }
