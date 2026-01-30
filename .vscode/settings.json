@@ -1,0 +1,10 @@
+{
+  "files.exclude": {
+    "**/__pycache__/**": true,
+    "**/.adk/**": true
+  },
+  "search.exclude": {
+    "**/__pycache__/**": true,
+    "**/.adk/**": true
+  }
+}
