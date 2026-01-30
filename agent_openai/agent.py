@@ -1,5 +1,12 @@
+from pathlib import Path
 from google.adk.agents.llm_agent import LlmAgent
 from google.adk.models.lite_llm import LiteLlm
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv(Path(__file__).resolve().parents[1] / ".env")
+except Exception:
+    pass
 
 # Mock tool implementation
 def get_current_time(city: str) -> dict:
