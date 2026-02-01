@@ -15,6 +15,7 @@ packages = [
     "llm_auditor",
     "multi_tool_agent",
     "my_agent",
+    "travel_concierge",
 ]
 
 [build-system]
