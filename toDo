@@ -1,0 +1,13 @@
+- Integrate https://github.com/google/adk-samples/tree/main/python/agents/travel-concierge
+- Integrate https://github.com/google/adk-samples/tree/main/python/agents/podcast_transcript_agent
+- Integrate https://github.com/google/adk-samples/tree/main/python/agents/story_teller
+- Integrate https://github.com/google/adk-samples/tree/main/python/agents/realtime-conversational-agent
+
+- Integrate https://github.com/google/adk-samples/blob/main/python/agents/marketing-agency/README.md
+- Integrate https://github.com/google/adk-samples/tree/main/python/agents/retail-ai-location-strategy
+- Integrate https://github.com/google/adk-samples/tree/main/python/agents/short-movie-agents
+- Integrate https://github.com/google/adk-samples/tree/main/python/agents/software-bug-assistant
+- Integrate https://github.com/google/adk-samples/tree/main/go/agents/sail-researcher
+
+- Integrate https://github.com/google/adk-samples/blob/main/python/agents/product-catalog-ad-generation/README.md
+- Integrate https://github.com/google/adk-samples/blob/main/python/agents/parallel_task_decomposition_execution/README.md
